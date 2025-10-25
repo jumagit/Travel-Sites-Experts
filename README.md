@@ -1,6 +1,6 @@
 # 🌴 TravelSitesExperts
 
-**TravelSitesExperts**At Travel Sites Experts, we craft high-converting websites that showcase your tours, highlight destinations, and help you attract more travelers worldwide.
+**TravelSitesExperts** Experts, we craft high-converting websites that showcase your tours, highlight destinations, and help you attract more travelers worldwide.
 
 ---
 
