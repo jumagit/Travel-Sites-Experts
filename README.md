@@ -1,38 +1,86 @@
-# salama-frontend
+# 🌴 TravelSitesExperts
 
-This template should help get you started developing with Vue 3 in Vite.
+**TravelSitesExperts** is a modern, responsive **travel booking and discovery platform** built to help users explore destinations, compare travel deals, and book trips effortlessly.  
+Designed with a focus on **speed**, **usability**, and **scalability**, it’s ideal for travel agencies, tour operators, and adventure lovers.
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## ✈️ Overview
 
-## Recommended Browser Setup
+TravelSitesExperts makes travel planning simple and engaging.  
+It allows users to:
+- 🌍 Discover top destinations and travel deals  
+- 🏨 Browse hotels, flights, and tour packages  
+- 📅 Book and manage trips online  
+- 💬 Get expert recommendations  
+- 📸 View beautiful destinations with gallery and blog integration  
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+---
 
-## Customize configuration
+## 🧩 Key Features
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+| Category | Description |
+|-----------|--------------|
+| 🧭 **Destinations** | Explore curated travel spots with detailed guides |
+| 🏨 **Bookings** | Integrated booking and payment modules |
+| 🗺️ **Interactive Maps** | Map-based destination discovery |
+| 💬 **Reviews** | Users can rate destinations and experiences |
+| 📰 **Blog** | Articles, travel tips, and destination guides |
+| 📧 **Contact Form** | Integrated EmailJS or backend API form |
+| 🧑‍💼 **Admin Dashboard** | Manage destinations, bookings, and blog posts |
+| 📱 **Responsive Design** | Works perfectly across mobile, tablet, and desktop |
 
-## Project Setup
+---
 
-```sh
+## 🏗️ Tech Stack
+
+| Layer | Technology |
+|-------|-------------|
+| **Frontend** | Vue.js |
+| **Backend** | Laravel (PHP) |
+| **Database** | MySQL / PostgreSQL |
+| **Styling** | Bootstrap / Tailwind CSS |
+| **Deployment** | Vercel / Netlify / cPanel |
+| **Email Integration** | EmailJS / Laravel Mail |
+| **APIs** | Google Maps / OpenWeather / TripAdvisor APIs |
+
+---
+
+## ⚙️ Installation & Setup
+
+### 🖥️ Prerequisites
+- Node.js (v18+)
+- PHP (v8+)
+- Composer
+- MySQL Database
+
+### 🧠 Setup Steps (Full Stack Example)
+
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/jumagit/travelsitesexperts.git
+
+# 2️⃣ Navigate into project folder
+cd travelsitesexperts
+
+# 3️⃣ Frontend setup (React or Vue)
+cd frontend
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
-```
 
-### Compile and Minify for Production
+# 4️⃣ Backend setup (Laravel)
+cd ../backend
+composer install
+cp .env.example .env
+php artisan key:generate
 
-```sh
-npm run build
-```
+# 5️⃣ Configure your database in .env
+DB_DATABASE=travelsites
+DB_USERNAME=root
+DB_PASSWORD=
+
+# 6️⃣ Run migrations and seed data
+php artisan migrate --seed
+
+# 7️⃣ Serve the backend
+php artisan serve
