@@ -1,0 +1,363 @@
+/* Global resets and base styles */
+
+@font-face {
+  font-family: 'Heading';
+  src: url('/src/assets/fonts/PPEiko-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HeadingBold';
+  src: url('/src/assets/fonts/PPEiko-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BodyFontBold';
+  src: url('/src/assets/fonts/GT-Walsheim-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BodyFont';
+  src: url('/src/assets/fonts/GT-Walsheim-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'BodyFont', sans-serif;
+}
+
+:root {
+  --forest-green: #228b22;
+  --crimson: #dc143c;
+  --orange: #ff8c00;
+  --dark-blue: #113f67;
+  --light-gray: #f8f9fa;
+  --text-dark: #333;
+  --transition: 0.3s ease;
+}
+
+body {
+  line-height: 1.6;
+  background: var(--light-gray);
+  color: var(--text-dark);
+  font-size: 16px;
+}
+
+/* Container */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'HeadingBold', sans-serif;
+  color: var(--forest-green);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+/* Links and Buttons */
+a {
+  color: var(--forest-green);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover,
+a:focus {
+  color: var(--crimson);
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: var(--forest-green);
+  border: none;
+  padding: 0.75rem 1.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: var(--crimson);
+  transform: translateY(-2px);
+}
+
+.btn-light {
+  background-color: var(--orange);
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.btn-light:hover {
+  background-color: var(--forest-green);
+}
+
+/* Hero Section */
+.landing-hero {
+  min-height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  padding: 3rem 1rem;
+}
+
+.landing-hero p.lead {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Sections */
+section {
+  padding: 3rem 1rem;
+}
+
+.bg-light {
+  background-color: var(--light-gray) !important;
+}
+
+.bg-primary {
+  background-color: var(--forest-green) !important;
+  color: white !important;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.text-primary {
+  color: var(--forest-green) !important;
+}
+
+.text-accent {
+  color: var(--crimson) !important;
+}
+
+.text-secondary {
+  color: var(--orange) !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/* Services Section */
+.services-section h2 {
+  margin-bottom: 2rem;
+}
+
+.services-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.services-section .col-md-4,
+.services-section .col-lg-3 {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow var(--transition), transform var(--transition);
+  flex: 1 1 22%;
+  max-width: 22%;
+  min-width: 250px;
+}
+
+.services-section .col-md-4:hover,
+.services-section .col-lg-3:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.services-section h5 {
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-icon {
+  color: var(--orange);
+  font-size: 3rem;
+}
+
+/* About Us Page */
+.about-hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.about-mission,
+.about-values,
+.about-story,
+.about-team,
+.about-cta {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-mission p,
+.about-story p {
+  line-height: 1.6;
+  font-size: 1.125rem;
+  color: #444;
+}
+
+.about-values {
+  background: #f8f9fa;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.about-values h2 {
+  margin-bottom: 2rem;
+}
+
+.about-values h5 {
+  font-weight: 700;
+  color: var(--forest-green);
+  margin-bottom: 0.5rem;
+}
+
+.about-values p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.about-values .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.about-team {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.about-team .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-team img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid var(--crimson);
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.about-team img:hover {
+  transform: scale(1.05);
+  border-color: var(--orange);
+}
+
+.about-team h5 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: var(--forest-green);
+}
+
+.about-team small {
+  color: #777;
+}
+
+.about-cta {
+  background-color: var(--crimson);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.about-cta h2 {
+  margin-bottom: 1rem;
+}
+
+.about-cta p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+  .services-section .col-md-4,
+  .services-section .col-lg-3 {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .services-section .col-md-4,
+  .services-section .col-lg-3 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .landing-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .landing-hero p.lead {
+    font-size: 1rem;
+  }
+}
